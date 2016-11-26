@@ -1,0 +1,49 @@
+Level 9
+
+Never before have you seen a room so full of sludge. Start the fireworks!
+
+Tip: Be careful not to let the ticking captive get caught in the flames. Use `warrior.distanceOf()` to avoid the captives.
+
+
+╔════╗
+║ssC>║
+║@sss║
+║ssC ║
+╚════╝
+
+  > = stairs
+  @ = bingbing
+  C = captive
+  s = sludge
+
+
+Warrior abilities:
+
+  warrior.directionOfStairs()
+
+  warrior.walk()
+
+  warrior.feel()
+
+  warrior.attack()
+
+  warrior.health()
+
+  warrior.rest()
+
+  warrior.bind()
+
+  warrior.rescue()
+
+  warrior.directionOf()
+
+  warrior.listen()
+
+  warrior.detonate()
+
+  warrior.look()
+
+  warrior.distanceOf() (NEW!)
+
+
+When you're done editing Player.js, run the warriorjs command again.

@@ -1,0 +1,11 @@
+
+function repeat(operation, num) {
+	if (num < = 0) {
+		return;
+	}
+	operation();
+	return repeat(opearation, num--);
+}
+
+    // Do not remove the line below
+module.exports = repeat
