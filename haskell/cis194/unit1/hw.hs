@@ -32,3 +32,16 @@ sumDigits' = sum . concat . (map toDigits)
 validate :: Integer -> Bool
 validate = f . sumDigits' . doubleEveryOther' . toDigits
     where f n = let (_, y) = divMod n 10 in y == 0
+
+
+type Peg = String
+type Move = (Peg, Peg)
+
+-- 1. move n − 1 discs from a to c using b as temporary storage
+-- 2. move the top disc from a to b
+-- 3. move n − 1 discs from c to b using a as temporary storage.
+-- hanoi 2 "a" "b" "c" == [("a","c"), ("a","b"), ("c","b")]
+hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
+hanoi 0 _ _ _ = []
+hanoi _ [] [] _ = []
+hanoi n a b c = hanoi (n-1) a c b ++ [(a, c)] ++ hanoi (n-1) b a c
